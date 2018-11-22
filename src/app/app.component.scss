@@ -1,0 +1,80 @@
+/* Simple */
+
+.box {
+    background: #123456;
+    width: 40px;
+    height: 400px;
+}
+
+.simple .box {
+    margin-top: 120vh;
+}
+
+/* Different root */
+
+.container {
+    width: 400px;
+    height: 500px;
+    margin-top: 40px;
+    border: 10px solid #000;
+    overflow: auto;
+}
+
+.root .box {
+    margin-top: 600px;
+}
+
+/* Multiple elements */
+
+.multiple .box {
+    margin-top: 150vh;
+}
+
+/* Threshold */
+
+.threshold .box {
+    margin-top: 120vh;
+}
+
+/* Infinite Scrolling */
+
+.article {
+    height: 10vh;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.sentinel {
+    width: 1px;
+    height: 1px;
+}
+
+
+/* Default */
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+.status {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.status--invisible {
+    background: red;
+    color: #fff;
+}
+
+.status--visible {
+    background: green;
+    color: #fff;
+}
