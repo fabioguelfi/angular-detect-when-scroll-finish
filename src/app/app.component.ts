@@ -12,32 +12,22 @@ export class AppComponent implements AfterViewInit {
   }
 
   private methodScrollListener(): void {
-    let visiblity = 'invisible';
-    
     // Create new IntersectionObserver
     const io = new IntersectionObserver(entries => {
-      // Available data when an intersection happens
-      console.log(entries);
-      // Element enters the viewport
-      if (entries[0].intersectionRatio !== 0) {
-        visiblity = 'visible';
-        // Element leaves the viewport 
-      } else {
-        visiblity = 'invisible';
-      }
-      updateStatus(visiblity);
+      (entries[0].intersectionRatio !== 0) ? updateStatus(true) : updateStatus(false)
     });
 
     // Elements to be observed
     const box1 = document.querySelector('.box1');
+    const box3 = document.querySelector('.box3');
 
     // Start observing .box
     io.observe(box1);
+    io.observe(box3);
 
     // Just necessary for displaying the current status
-    function updateStatus(visiblity) {
+    const updateStatus = (visiblity) => {
       console.log(`Update var on class component`, visiblity);
     }
-
   }
 }
